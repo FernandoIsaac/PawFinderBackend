@@ -20,7 +20,7 @@ exports.login = {
               request.cookieAuth.set(user[0]);
               return reply({username: user[0].username, scope: user[0].scope});
             }
-            return reply(boom.unauthorized('Wrong email or password'));
+            return reply(boom.unauthorized('Wrong username or password'));
           }
           return reply(boom.notAcceptable('Error Executing Query'));
       });
